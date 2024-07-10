@@ -6,6 +6,7 @@ import { List } from '../List'
 import { TabBar } from '../TabBar'
 import { Search } from '../Search'
 import { TodoContext } from '../Context'
+import { ModalNewTask } from '../ModalNewTask'
 
 const AppUI = () => {
     const { todos, searchedTask } = useContext(TodoContext);
@@ -28,6 +29,7 @@ const AppUI = () => {
                 </List>
             </Layout>
             <TabBar />
+            <ModalNewTask />
         </>
     )
 }

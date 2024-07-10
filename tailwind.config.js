@@ -11,7 +11,8 @@ export default {
       ...colors,
       "primary": "#E7FCDC",
       "secondary": "#547046",
-      "tertiary": "#649B46"
+      "tertiary": "#649B46",
+      "modal": "rgba(0, 0, 0, 0.7)",
     },
   },
   plugins: [],
