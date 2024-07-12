@@ -3,10 +3,17 @@ import { TodoContext } from '../Context'
 
 const Counter = () => {
   const { totalTodos, completedTodos } = useContext(TodoContext);
+  const renderCounter = () => {
+    if (totalTodos >= 1 && totalTodos === completedTodos) {
+      return <h2 className='font-bold text-tertiary'>You have completed all of your To-Dos! 🥳</h2>
+    } else {
+      return <h2 className='font-light'>You have completed {completedTodos} out of {totalTodos} To-Dos</h2>
+    }
+  }
   return (
     <>
       <h1 className='font-extrabold text-2xl text-secondary pt-6'>TO-DO TITAN</h1>
-      <h2 className='font-light'>You have completed {completedTodos} of {totalTodos} To-Dos</h2>
+      {renderCounter()}
     </>
   )
 }

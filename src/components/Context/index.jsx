@@ -13,6 +13,7 @@ const TodoProvider = ({ children }) => {
     ]
     const [todos, setTodos] = useState(defaultTodos);
     const [searchedTask, setSearchedTask] = useState('');
+    const [isOpenModal, setIsOpenModal] = useState(false);
     const totalTodos = todos.length;
     const completedTodos = todos.filter(todo => todo.value === true).length;
 
@@ -29,6 +30,10 @@ const TodoProvider = ({ children }) => {
         setTodos(newTodos);
     }
 
+    const saveTask = (task) => {
+        setTodos([...todos, task])
+    }
+
     return (
         <TodoContext.Provider value={{
             todos,
@@ -39,7 +44,10 @@ const TodoProvider = ({ children }) => {
             searchedTask,
             setSearchedTask,
             completeTask,
-            deleteTask
+            deleteTask,
+            isOpenModal,
+            setIsOpenModal,
+            saveTask
 
         }}>
             {children}
