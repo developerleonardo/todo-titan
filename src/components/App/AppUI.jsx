@@ -7,9 +7,12 @@ import { TabBar } from '../TabBar'
 import { Search } from '../Search'
 import { TodoContext } from '../Context'
 import { ModalNewTask } from '../ModalNewTask'
+import { Loading } from '../Loading'
+import { EmptyTask } from '../EmptyTask'
+import { NoResultsFound } from '../NoResultsFound'
 
 const AppUI = () => {
-    const { todos, searchedTask } = useContext(TodoContext);
+    const { todos, loading, filteredTasks } = useContext(TodoContext);
     return (
         <>
             <Layout>
@@ -17,14 +20,19 @@ const AppUI = () => {
                 <Search />
                 <List>
                     {
-                        todos.filter((todo) => {
-                            return searchedTask === '' || todo.text.toLowerCase().includes(searchedTask.toLowerCase())
-                        }).map((item, index) => {
+                        loading ? <Loading /> :
+                        filteredTasks.map((item, index) => {
                             return <Item
                                 key={index}
                                 text={item.text}
                                 value={item.value} />
                         })
+                    }
+                    {
+                        filteredTasks.length === 0 && !loading && <NoResultsFound />
+                    }
+                    {
+                        todos.length === 0 && !loading && <EmptyTask />
                     }
                 </List>
             </Layout>
