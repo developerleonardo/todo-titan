@@ -69,7 +69,7 @@ const TodoProvider = ({ children }) => {
             videogames: "🎮",
             singing: "🎤",
             music: "🎵",
-            paino: "🎹",
+            piano: "🎹",
             movies: "🎬",
             cinema: "🎬",
             beach: "🏖",
