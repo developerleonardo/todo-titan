@@ -2,15 +2,16 @@
 
 To-Do Titan is a powerful and intuitive task management app designed to streamline your daily life. Built with React, Vite.js, and TailwindCSS, To-Do Titan offers a seamless and efficient experience for organizing your tasks. With To-Do Titan, you can easily create, manage, and track your daily to-do lists. Add new tasks with ease, mark them as completed, or delete them as needed. Simply jot down your daily itinerary, and let To-Do Titan ensure you stay on top of everything throughout the day and month. Never miss a task again with To-Do Titan—your ultimate productivity companion.
 
-![](https://gcdnb.pbrd.co/images/nb5aoquR4ra7.png?o=1)
+<p align="center"><img src="https://gcdnb.pbrd.co/images/nb5aoquR4ra7.png?o=1" alt="project-image"></p>
 
-![](https://gcdnb.pbrd.co/images/GUJH7Zoz3p7u.png?o=1)
+<p align="center"><img src="https://gcdnb.pbrd.co/images/GUJH7Zoz3p7u.png?o=1" alt="project-image"></p>
 
 ## DEMO
 
 I invite you to try all the features of this project by clicking in the following link
 [To-Do Titan](https://developerleonardo.github.io/todo-titan/)
-![](https://gcdnb.pbrd.co/images/ITFFWnM2u58z.png?o=1)
+<p align="center"><img src="https://gcdnb.pbrd.co/images/ITFFWnM2u58z.png?o=1" alt="project-image"></p>
+
 
 ## AVAILABLE SCRIPT
 
