@@ -20,7 +20,7 @@ const ModalNewTask = () => {
       {
         isOpenModal &&
         <div className='fixed top-0 right-0 bottom-0 left-0 bg-modal'>
-          <dialog className='w-4/5 absolute flex top-[200px] h-[400px] rounded-md'>
+          <dialog className='w-4/5 absolute flex top-[200px] h-[400px] rounded-md max-w-[344px]'>
             <img src="./img/robot-todo.png" alt="robot with a to do paper" className='w-64 h-64 -top-40 absolute left-10' />
             <XCircleIcon className='absolute w-6 h-6 right-0' onClick={() => setIsOpenModal(false)} />
             <form ref={form} method="dialog" className='flex flex-col w-full h-full items-center p-6 gap-4 mt-12' onSubmit={addTask}>

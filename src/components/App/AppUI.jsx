@@ -21,15 +21,15 @@ const AppUI = () => {
                 <List>
                     {
                         loading ? <Loading /> :
-                        filteredTasks.map((item, index) => {
-                            return <Item
-                                key={index}
-                                text={item.text}
-                                value={item.value} />
-                        })
+                            filteredTasks.map((item, index) => {
+                                return <Item
+                                    key={index}
+                                    text={item.text}
+                                    value={item.value} />
+                            })
                     }
                     {
-                        filteredTasks.length === 0 && !loading && <NoResultsFound />
+                        filteredTasks.length === 0 && !loading && todos.length > 0 && <NoResultsFound />
                     }
                     {
                         todos.length === 0 && !loading && <EmptyTask />

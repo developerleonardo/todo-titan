@@ -21,7 +21,7 @@ const TodoProvider = ({ children }) => {
                     setTodos(parsedItem);
                 }
                 setLoading(false);
-            } catch(error) {
+            } catch (error) {
                 console.error("Something went wrong");
             }
         }, 2000);
@@ -45,10 +45,52 @@ const TodoProvider = ({ children }) => {
         localStorage.setItem("TASKS_V1", JSON.stringify(newTodos));
     }
 
+    const addEmoji = (text) => {
+        const listOfEmojis = {
+            running: "🏃‍♂️",
+            shopping: "🛒",
+            swimming: "🏊‍♀️",
+            cooking: "👨‍🍳",
+            study: "👩‍💻",
+            code: "👩‍💻",
+            working: "👨‍💼👩‍💼",
+            walk: "🚶‍♀️",
+            bath: "🛀",
+            sleep: "🛌",
+            dancing: "💃",
+            surf: "🏄‍♀️",
+            bike: "🚴‍♂️",
+            gym: "💪",
+            party: "🎈",
+            soccer: "⚽",
+            football: "🏈",
+            golf: "⛳",
+            skate: "⛸",
+            videogames: "🎮",
+            singing: "🎤",
+            music: "🎵",
+            paino: "🎹",
+            movies: "🎬",
+            cinema: "🎬",
+            beach: "🏖",
+            travel: "✈",
+            dog: "🐕",
+            cat: "🐈‍",
+            read: "👀"
+        }
+        for (const [keyword, emoji] of Object.entries(listOfEmojis)) {
+            if (text.toLowerCase().includes(keyword)) {
+                return `${text} ${emoji}`
+            }
+        }
+        return text;
+    }
+
     const saveTask = (task) => {
-        if(task.text.length){
-            localStorage.setItem("TASKS_V1", JSON.stringify([...todos, task]));
-            setTodos([...todos, task]);
+        if (task.text.length) {
+            const taskWithEmoji = {...task, text: addEmoji(task.text)}
+            localStorage.setItem("TASKS_V1", JSON.stringify([...todos, taskWithEmoji]));
+            setTodos([...todos, taskWithEmoji]);
         } else {
             alert("You should type a task");
         }
@@ -72,7 +114,8 @@ const TodoProvider = ({ children }) => {
             setIsOpenModal,
             saveTask,
             loading,
-            filteredTasks
+            filteredTasks,
+            addEmoji
 
         }}>
             {children}
