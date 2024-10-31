@@ -35,8 +35,8 @@ const AppUI = () => {
                         todos.length === 0 && !loading && <EmptyTask />
                     }
                 </List>
+                <TabBar />
             </Layout>
-            <TabBar />
             <ModalNewTask />
         </>
     )
