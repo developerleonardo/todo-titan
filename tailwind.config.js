@@ -13,6 +13,8 @@ export default {
       "secondary": "#547046",
       "tertiary": "#649B46",
       "modal": "rgba(0, 0, 0, 0.7)",
+      "white": "#fbfbfb",
+      "light-green": "#79b359"
     },
   },
   plugins: [],

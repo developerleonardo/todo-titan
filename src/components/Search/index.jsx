@@ -6,7 +6,7 @@ const Search = () => {
     return (
         <input 
         type="text" 
-        className=' p-2 w-[300px] border-2' 
+        className='mt-2 p-2 w-full border-2 rounded-xl' 
         placeholder='Search a task'
         onChange={(event) => setSearchedTask(event.target.value)}
          />

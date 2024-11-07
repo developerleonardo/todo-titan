@@ -2,8 +2,8 @@ import React from 'react'
 
 const NoResultsFound = () => {
   return (
-    <div className='flex w-full justify-center items-center h-20'>
-        <p className='text-slate-300 font-medium'>No results found</p>
+    <div className='w-full h-3/4 flex justify-center items-center'>
+        <p className='text-slate-300 text-xl font-bold md:text-3xl'>No results found</p>
     </div>
   )
 }
